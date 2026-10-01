@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle do Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-clara">
+  <header><h1>Controle do Dia</h1></header>
+
+  <main>
+    <label>Escolha a data:</label>
+    <input type="date" id="data-filtro">
+
+    <div id="resultado" class="resultado"></div>
+
+    <a href="home.html" class="btn-voltar">← Voltar</a>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/controle.js"></script>
+</body>
+</html>

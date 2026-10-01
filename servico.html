@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Adicionar Serviço</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-clara">
+  <header><h1>Adicionar Serviço</h1></header>
+
+  <main>
+    <form id="form-servico">
+      <input type="text"   id="desc-servico"  placeholder="Descrição do serviço" required>
+      <input type="number" id="valor-servico" placeholder="Valor (R$)" step="0.01" required>
+      <input type="date"   id="data-servico"  required>
+      <button type="submit">Salvar Serviço</button>
+    </form>
+
+    <h2>Serviços lançados</h2>
+    <ul id="lista-servicos"></ul>
+
+    <a href="home.html" class="btn-voltar">← Voltar</a>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/servico.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Adicionar Gasto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-clara">
+  <header><h1>Adicionar Gasto</h1></header>
+
+  <main>
+    <form id="form-gasto">
+      <input type="text"   id="desc-gasto"  placeholder="Descrição do gasto" required>
+      <input type="number" id="valor-gasto" placeholder="Valor (R$)" step="0.01" required>
+      <input type="date"   id="data-gasto"  required>
+      <button type="submit">Salvar Gasto</button>
+    </form>
+
+    <h2>Gastos lançados</h2>
+    <ul id="lista-gastos"></ul>
+
+    <a href="home.html" class="btn-voltar">← Voltar</a>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/gasto.js"></script>
+</body>
+</html>

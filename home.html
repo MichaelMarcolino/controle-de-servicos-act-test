@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Início</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <button id="btn-menu">☰</button>
+    <h1>Controle de Entregas</h1>
+  </header>
+
+  <nav id="menu" class="menu-escondido">
+    <a href="home.html">Início</a>
+    <a href="servico.html">Adicionar Serviço</a>
+    <a href="gasto.html">Adicionar Gasto</a>
+    <a href="controle.html">Controle do Dia</a>
+    <a href="#" id="sair">Sair</a>
+  </nav>
+
+  <main>
+    <section class="botoes-home">
+      <a href="servico.html" class="btn">➕ Adicionar Serviço</a>
+      <a href="gasto.html" class="btn">➖ Adicionar Gasto</a>
+      <a href="controle.html" class="btn">📅 Controle do Dia</a>
+    </section>
+
+    <section class="saldos">
+      <div class="card">
+        <h2>Saldo Atual</h2>
+        <p id="saldo-atual">R$ 0,00</p>
+      </div>
+      <div class="card">
+        <h2>Saldo com Descontos</h2>
+        <p id="saldo-desconto">R$ 0,00</p>
+      </div>
+    </section>
+  </main>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

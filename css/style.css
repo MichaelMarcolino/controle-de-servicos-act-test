@@ -1,0 +1,206 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+body {
+  background-image: url('../css/fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header h1 { font-size: 20px; flex: 1; text-align: center; }
+
+#btn-menu {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-escondido { display: none; }
+nav {
+  background: #1e3a8a;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-bottom: 1px solid #2e4ea8;
+}
+
+main { padding: 20px; max-width: 800px; margin: auto; }
+
+.botoes-home {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+.btn {
+  display: block;
+  text-align: center;
+  background: #2563eb;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover { background: #1d4ed8; }
+
+.saldos { display: flex; gap: 15px; flex-wrap: wrap; }
+.card {
+  flex: 1;
+  min-width: 150px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  text-align: center;
+}
+.card h2 { font-size: 14px; color: #666; margin-bottom: 8px; }
+.card p  { font-size: 22px; font-weight: bold; color: #1e3a8a; }
+
+form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+form input, form button {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+form button:hover { background: #1d4ed8; }
+
+ul { list-style: none; }
+ul li {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-apagar {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 20px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* LOGIN */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+}
+.login-box h1 { font-size: 20px; margin-bottom: 20px; color: #1e3a8a; }
+.login-box input { width: 100%; margin-bottom: 10px; padding: 12px; border-radius: 6px; border: 1px solid #ccc; }
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#msg-erro { color: red; margin-top: 10px; font-size: 14px; }
+/* ===========================
+   PÁGINAS COM TEXTO BRANCO
+   (serviço, gasto, controle)
+   =========================== */
+
+.pagina-clara {
+  color: #ffffff;
+}
+
+.pagina-clara main {
+  color: #ffffff;
+}
+
+/* Títulos */
+.pagina-clara h1,
+.pagina-clara h2,
+.pagina-clara h3 {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* melhora leitura no fundo */
+}
+
+/* Labels e textos gerais */
+.pagina-clara label,
+.pagina-clara p,
+.pagina-clara span {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Lista de itens — mantém fundo claro pra contraste */
+.pagina-clara ul li {
+  color: #1e3a8a; /* texto azul escuro nos cards brancos */
+  text-shadow: none;
+}
+
+/* Botão voltar */
+.pagina-clara .btn-voltar {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.pagina-clara .btn-voltar:hover {
+  color: #c7d2fe;
+}
+.pagina-clara ul li,
+.pagina-clara ul li span,
+.pagina-clara ul li strong,
+.pagina-clara ul li * {
+  color: #1e3a8a !important; /* mesmo azul dos itens originais */
+  text-shadow: none !important;
+}
