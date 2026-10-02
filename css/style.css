@@ -1,4 +1,12 @@
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+/* ===========================
+   RESET E BASE
+   =========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
 body {
   background-image: url('../css/fundo.jpg');
@@ -7,10 +15,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #333;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body::before {
@@ -21,6 +25,9 @@ body::before {
   z-index: -1;
 }
 
+/* ===========================
+   HEADER E NAV
+   =========================== */
 header {
   background: #1e3a8a;
   color: white;
@@ -29,7 +36,12 @@ header {
   align-items: center;
   gap: 15px;
 }
-header h1 { font-size: 20px; flex: 1; text-align: center; }
+
+header h1 {
+  font-size: 20px;
+  flex: 1;
+  text-align: center;
+}
 
 #btn-menu {
   background: transparent;
@@ -40,12 +52,14 @@ header h1 { font-size: 20px; flex: 1; text-align: center; }
 }
 
 .menu-escondido { display: none; }
+
 nav {
   background: #1e3a8a;
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
+
 nav a {
   color: white;
   text-decoration: none;
@@ -53,14 +67,25 @@ nav a {
   border-bottom: 1px solid #2e4ea8;
 }
 
-main { padding: 20px; max-width: 800px; margin: auto; }
+/* ===========================
+   LAYOUT PRINCIPAL
+   =========================== */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
 
+/* ===========================
+   HOME - BOTÕES E CARDS
+   =========================== */
 .botoes-home {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 18px;
   margin-bottom: 25px;
 }
+
 .btn {
   display: block;
   text-align: center;
@@ -71,37 +96,73 @@ main { padding: 20px; max-width: 800px; margin: auto; }
   text-decoration: none;
   font-weight: bold;
 }
-.btn:hover { background: #1d4ed8; }
 
-.saldos { display: flex; gap: 15px; flex-wrap: wrap; }
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.saldos {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 .card {
   flex: 1;
   min-width: 150px;
   background: white;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-.card h2 { font-size: 14px; color: #666; margin-bottom: 8px; }
-.card p  { font-size: 22px; font-weight: bold; color: #1e3a8a; }
 
-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-form input, form button {
+.card h2 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+/* ===========================
+   FORMULÁRIOS
+   =========================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input,
+form button {
   padding: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 15px;
 }
+
 form button {
   background: #2563eb;
   color: white;
   border: none;
   cursor: pointer;
 }
-form button:hover { background: #1d4ed8; }
 
+form button:hover {
+  background: #1d4ed8;
+}
+
+/* ===========================
+   LISTAS E BOTÃO APAGAR
+   =========================== */
 ul { list-style: none; }
+
 ul li {
   background: white;
   padding: 12px;
@@ -111,6 +172,7 @@ ul li {
   justify-content: space-between;
   align-items: center;
 }
+
 .btn-apagar {
   background: #ef4444;
   color: white;
@@ -127,68 +189,27 @@ ul li {
   text-decoration: none;
 }
 
-/* LOGIN */
-.login-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-.login-box {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  width: 320px;
-  text-align: center;
-}
-.login-box h1 { font-size: 20px; margin-bottom: 20px; color: #1e3a8a; }
-.login-box input { width: 100%; margin-bottom: 10px; padding: 12px; border-radius: 6px; border: 1px solid #ccc; }
-.login-box button {
-  width: 100%;
-  padding: 12px;
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-#msg-erro { color: red; margin-top: 10px; font-size: 14px; }
 /* ===========================
    PÁGINAS COM TEXTO BRANCO
    (serviço, gasto, controle)
    =========================== */
-
 .pagina-clara {
   color: #ffffff;
 }
 
-.pagina-clara main {
-  color: #ffffff;
-}
-
-/* Títulos */
 .pagina-clara h1,
 .pagina-clara h2,
 .pagina-clara h3 {
   color: #ffffff;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* melhora leitura no fundo */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Labels e textos gerais */
 .pagina-clara label,
-.pagina-clara p,
-.pagina-clara span {
+.pagina-clara p {
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Lista de itens — mantém fundo claro pra contraste */
-.pagina-clara ul li {
-  color: #1e3a8a; /* texto azul escuro nos cards brancos */
-  text-shadow: none;
-}
-
-/* Botão voltar */
 .pagina-clara .btn-voltar {
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -197,148 +218,10 @@ ul li {
 .pagina-clara .btn-voltar:hover {
   color: #c7d2fe;
 }
-.pagina-clara ul li,
-.pagina-clara ul li span,
-.pagina-clara ul li strong,
-.pagina-clara ul li * {
-  color: #1e3a8a !important; /* mesmo azul dos itens originais */
-  text-shadow: none !important;
-}
-/* Cabeçalho do grupo: força texto branco (vence a regra anterior) */
-.pagina-clara .grupo-data details > summary,
-.pagina-clara .grupo-data details > summary *,
-.pagina-clara .grupo-data .grupo-titulo,
-.pagina-clara .grupo-data .grupo-info {
-  color: #ffffff !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
-}
-
-.pagina-clara .grupo-data .grupo-info {
-  color: #c7d2fe !important; /* lilás claro pra diferenciar */
-}
-@media (max-width: 600px) {
-  /* Header mais compacto */
-  header {
-    padding: 12px;
-  }
-  header h1 {
-    font-size: 17px;
-  }
-
-  /* Main com menos padding */
-  main {
-  min-height: calc(100vh - 60px); /* 60px é a altura aproximada do header */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  }
-
-  /* Botões maiores e mais espaçados no mobile */
-  .botoes-home, .saldos {
-    gap: 15px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 500px;
-  }
-  .btn {
-    padding: 18px 15px;
-    font-size: 15px;
-    border-radius: 10px;
-  }
-
-  /* Cards de saldo: um embaixo do outro, largura total */
-  .saldos {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .card {
-    min-width: 100%;
-    padding: 18px;
-  }
-  .card h2 {
-    font-size: 13px;
-  }
-  .card p {
-    font-size: 24px;
-  }
-
-  /* Formulários: inputs maiores pra toque */
-  form input,
-  form button {
-    padding: 14px;
-    font-size: 16px; /* >=16px evita zoom automático no iOS */
-  }
-
-  /* Lista de itens: quebra o texto se for longo */
-  ul li {
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    padding: 12px;
-    font-size: 14px;
-    flex-wrap: wrap;
-  }
-  ul li span {
-    flex: 1;
-    min-width: 0;
-    word-break: break-word;
-  }
-
-  /* Botão apagar um pouco maior */
-  .btn-apagar {
-    padding: 10px 14px;
-    font-size: 16px;
-    flex-shrink: 0;
-  }
-
-  /* Resultado do controle do dia */
-  .resultado h2 {
-    font-size: 16px;
-  }
-  .resultado h3 {
-    font-size: 15px;
-  }
-  .resultado ul li {
-    font-size: 14px;
-  }
-
-  /* Login no mobile */
-  .login-box {
-    width: 90%;
-    max-width: 340px;
-    padding: 25px 20px;
-  }
-}
-/* Fora do @media — vale pra todas as telas */
-.saldos {
-  gap: 30px;
-}
-
-.botoes-home {
-  gap: 18px;
-  margin-bottom: 20px;
-}
-
-/* Celulares muito estreitos (até 360px) */
-@media (max-width: 360px) {
-  .btn {
-    font-size: 14px;
-    padding: 16px 10px;
-  }
-  .card p {
-    font-size: 20px;
-  }
-  header h1 {
-    font-size: 15px;
-  }
-}
 
 /* ===========================
    GRUPOS POR DATA (acordeão)
    =========================== */
-
 .grupo-data {
   margin-bottom: 10px;
   background: transparent;
@@ -346,14 +229,6 @@ ul li {
   list-style: none;
 }
 
-/* Remove estilos padrão do li que envolvem o grupo */
-.pagina-clara .grupo-data,
-.pagina-clara .grupo-data * {
-  color: inherit;
-  text-shadow: none;
-}
-
-/* Cabeçalho do grupo (a parte clicável) */
 .grupo-data details > summary {
   background: rgba(30, 58, 138, 0.9);
   color: #ffffff;
@@ -371,7 +246,7 @@ ul li {
 }
 
 .grupo-data details > summary::-webkit-details-marker {
-  display: none; /* remove a setinha padrão do Chrome */
+  display: none;
 }
 
 .grupo-data details > summary::after {
@@ -402,7 +277,6 @@ ul li {
   margin-right: 8px;
 }
 
-/* Lista de itens dentro do grupo */
 .grupo-itens {
   list-style: none;
   padding: 0;
@@ -424,34 +298,14 @@ ul li {
 
 .grupo-itens li span {
   flex: 1;
-  color: #1e3a8a !important;
-  text-shadow: none !important;
+  color: #1e3a8a;
+  text-shadow: none;
   word-break: break-word;
 }
 
-/* Mobile: ajustes */
-@media (max-width: 600px) {
-  .grupo-data details > summary {
-    padding: 12px 14px;
-    font-size: 14px;
-    flex-wrap: wrap;
-  }
-  .grupo-titulo {
-    font-size: 14px;
-  }
-  .grupo-info {
-    font-size: 11px;
-    width: 100%;
-    margin: 4px 0 0 0;
-    order: 3;
-  }
-  .grupo-itens li {
-    font-size: 13px;
-    padding: 10px 12px;
-  }
-}
-
-/* Aviso de vazio */
+/* ===========================
+   AVISO DE VAZIO
+   =========================== */
 .vazio {
   background: rgba(255, 255, 255, 0.9);
   color: #1e3a8a;
@@ -462,8 +316,47 @@ ul li {
 }
 
 /* ===========================
-   ABAS LOGIN / CADASTRO
+   LOGIN / CADASTRO
    =========================== */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+}
+
+.login-box h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .tabs {
   display: flex;
   gap: 8px;
@@ -487,9 +380,7 @@ ul li {
   color: white;
 }
 
-.form-escondido {
-  display: none;
-}
+.form-escondido { display: none; }
 
 .form-ativo {
   display: flex;
@@ -505,44 +396,144 @@ ul li {
 }
 
 /* ===========================
-   ABAS LOGIN / CADASTRO
+   RESPONSIVIDADE MOBILE
    =========================== */
-.tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
+@media (max-width: 600px) {
+  /* Header */
+  header { padding: 12px; }
+  header h1 { font-size: 17px; }
+
+  /* Main home: flui naturalmente, não centraliza */
+  main { padding: 20px 15px 30px; }
+
+  /* Botões da home */
+  .botoes-home,
+  .saldos {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .botoes-home {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    padding: 15px 12px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  /* Cards de saldo: empilhados, mais compactos */
+  .saldos {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    min-width: 100%;
+    padding: 15px;
+  }
+
+  .card h2 { font-size: 13px; }
+  .card p { font-size: 22px; }
+
+  /* Formulários: inputs maiores pra toque */
+  form input,
+  form button {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  /* Listas */
+  ul li {
+    gap: 10px;
+    padding: 12px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  ul li span {
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+  }
+
+  .btn-apagar {
+    padding: 10px 14px;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  /* Grupos por data */
+  .grupo-data details > summary {
+    padding: 12px 14px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .grupo-titulo { font-size: 14px; }
+
+  .grupo-info {
+    font-size: 11px;
+    width: 100%;
+    margin: 4px 0 0 0;
+    order: 3;
+  }
+
+  .grupo-itens li {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  /* Login no mobile */
+  .login-box {
+    width: 90%;
+    max-width: 340px;
+    padding: 25px 20px;
+  }
 }
 
-.tab {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  background: #e5e7eb;
-  color: #1e3a8a;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
+/* Celulares muito estreitos */
+@media (max-width: 360px) {
+  .btn {
+    font-size: 14px;
+    padding: 16px 10px;
+  }
+  .card p { font-size: 20px; }
+  header h1 { font-size: 15px; }
 }
 
-.tab.ativo {
-  background: #2563eb;
-  color: white;
-}
+/* ===========================
+   HOME - CARDS COMPACTOS NO MOBILE
+   =========================== */
+@media (max-width: 600px) {
+  /* Botões da home mais enxutos */
+  .botoes-home .btn {
+    padding: 14px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
 
-.form-escondido {
-  display: none;
-}
+  /* Cards de saldo: 2 lado a lado (mais compacto) */
+  .saldos {
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
 
-.form-ativo {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+  .card {
+    min-width: 0;
+    padding: 12px 8px;
+    border-radius: 8px;
+  }
 
-#msg-erro {
-  color: #dc2626;
-  margin-top: 12px;
-  font-size: 14px;
-  min-height: 20px;
+  .card h2 {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .card p {
+    font-size: 18px;
+  }
 }
