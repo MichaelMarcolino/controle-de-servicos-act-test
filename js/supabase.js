@@ -2,3 +2,15 @@ const SUPABASE_URL = 'https://ghqulurcxvsncmvtbrzt.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdocXVsdXJjeHZzbmNtdnRicnp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA3ODE5MDEsImV4cCI6MjEwNjM1NzkwMX0.xKe_t2OLfiv9pcTizwgZhnT5imIrGjxNQ0YH_7b7ldE';
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// ========================
+// PROTEÇÃO DE PÁGINA
+// ========================
+async function protegerPagina() {
+  const { data: { session } } = await supabaseClient.auth.getSession();
+  if (!session) {
+    window.location.href = 'index.html';
+    return null;
+  }
+  return session;
+}
